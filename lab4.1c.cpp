@@ -32,7 +32,7 @@ int main()
 	float totalbi = biemi*2;
 	float savings = (emi*numpay)-(biemi*binumpay);
 			
-	cout << fixed << setprecision(2);
+	cout << fixed << setprecision(2); //if you want to tuen this off you use cout.unsetf(ios::fixed)
 	
 	cout << setw(30) << left << "Loan Amount" << ": $" << setw(10) << right << loan << endl;
 	cout << setw(30) << left << "Annual Interest Rate" << ": " << setw(11) << right << interest << "%"<< endl;
