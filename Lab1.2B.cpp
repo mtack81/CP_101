@@ -1,3 +1,5 @@
+// Demonstrates cout formatting: strings, escape sequences (\a bell),
+// setprecision/fixed for decimal output, and mixed cout statements
 #include <iostream>
 #include <iomanip>
 
