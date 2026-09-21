@@ -1,5 +1,6 @@
 // Prints the first 20 odd, then even, numbers.
 // Once done, it prints them in reverse order.
+// This is just an odd and even number loop
 
 #include <stdio.h>
 using namespace std;
