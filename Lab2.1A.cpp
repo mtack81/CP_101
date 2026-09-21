@@ -9,7 +9,7 @@ int main()
 {
   float hrpwk,dlphr,yrpay,wkpay; 
       // hrpwk = # hrs/week   dlphr = $ /hour   wkpay = gross weekly pay
-  char name[35]="Mike Tackett";
+  char name[35]="Mike Tackett"; // char[] used instead of string, since this program is stdio.h/printf only
   
   hrpwk = 40.0;
   dlphr = 67.75;
