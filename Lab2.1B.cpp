@@ -1,5 +1,7 @@
 /* Filename: PayrollB.CPP */
 // Calculates the Weekly Gross Pay
+// NOTE: no setprecision/fixed here, so dollar output may drop decimals
+// (compare to Lab 4.1b, which added <iomanip> for 2-decimal formatting)
 
 #include <iostream>
 using namespace std;
