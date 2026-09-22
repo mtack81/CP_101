@@ -1,4 +1,7 @@
+// Demonstrates printf format specifiers: %d (int), %f (float, with precision),
+// %c (char), %s (string) - all combined in different printf calls
 //Program Lab3 A
+
 #include <stdio.h>
 int main()
 {
