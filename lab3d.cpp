@@ -13,6 +13,9 @@ int main()
 	cout<< "What is the temperature in Celsius? ";
 	cin>> Celsius;
 	
+// (9.0/5) uses a decimal instead of (9/5) to force floating-point division
+// (9/5) with two ints would truncate to 1, giving a wrong Fahrenheit result	
+
 	Fahrenheit = (9.0/5)*Celsius + 32;
 	Kelvin = Celsius + 273;
 	
