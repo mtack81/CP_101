@@ -1,10 +1,14 @@
 // box office program
+// Box office program - declares int/float/string variables, takes user input,
+// calculates gross/net profit, formats output with manual spacing (spacebar alignment)
 
 #include <iostream>
 using namespace std;
 
 int main()
 {
+// string, int, and float declared together - each holds a different kind of data:
+// string = text, int = whole numbers, float = decimals (ticket prices)
 	string movie;
 	int adults;
 	int seniors;
@@ -28,7 +32,9 @@ int main()
 	float gross = (adults*prad)+(seniors*prsen)+(children*prchi);
 	float net = gross*.35;
 	float dist = gross*.65;
-	
+// Output columns aligned manually using spaces inside the strings
+// (works here, but breaks if input length varies - setw() from <iomanip>
+// is the more reliable way to align columns, used in later labs)
 	cout<< "Movie Name:                   "<< "\"" << movie << "\"" << endl;
 	cout<< "Adult Tickets Sold:             "<< adults<< endl;
 	cout<< "Senior Tickets Sold:            "<< seniors<< endl;
