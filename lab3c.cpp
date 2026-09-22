@@ -1,4 +1,6 @@
 // box office program
+// Box office program - printf/scanf version of lab3b (same math, stdio.h only)
+// %s reads a single word only - "BruinValley" works, "Bruin Valley" would break it
 
 #include <stdio.h>
 
@@ -11,7 +13,8 @@ int main()
 	float prad = 11.50;
 	float prsen = 10.00;
 	float prchi = 8.50;
-	
+// no & before movie - arrays (char movie[50]) already act as an address,
+// unlike int/float which need & to point scanf at their memory location
 	printf("Box Office Program\n");
 	printf("\n");
 	printf("What is the name of the movie? ");
@@ -27,7 +30,8 @@ int main()
 	float gross = (adults*prad)+(seniors*prsen)+(children*prchi);
 	float net = gross*.35;
 	float dist = gross*.65;
-	
+// %.2f forces 2 decimal places directly in printf - no setprecision/<iomanip> needed
+// (this is the printf equivalent of cout's fixed + setprecision(2))	
 	printf("Movie Name:                   \"%s\"\n", movie);
 	printf("Adult Tickets Sold:             %d\n", adults);
 	printf("Senior Tickets Sold:            %d\n", seniors);
