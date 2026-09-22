@@ -1,8 +1,10 @@
 // Michael Tackett k0475835 fall semester 2026
+// Rain/snow gauge calculator - mixes stdio.h (printf/scanf) with iostream (cin.getline)
+// NOTE: mixing these is unusual; most labs stick to one or the other
 
 #include <stdio.h>
 #include <string>
-#include <iostream>;
+#include <iostream>
 using namespace std;
 
 int main()
@@ -11,7 +13,11 @@ int main()
       char town[64];
       float rainam;
       float rainpm;
-            
+      
+// cin.getline(town, 64) reads a full line (including spaces) into a char array
+// handles multi-word town names, unlike scanf("%s",...) or cin >> town   
+// town uses cin.getline (needs spaces), rain amounts use scanf (numbers only, no space issue)
+
       printf("Winter 26/27 Rain/Snow Gauge\n");
       printf("\n");
       printf("What is the name of the town? ");
@@ -22,6 +28,9 @@ int main()
       scanf("%f", &rainpm);
       printf("\n");
       
+// Reading a STRING with spaces: cin.getline(var, size) or scanf(" %[^\n]", var) however, using the %[^\n] is unacceptable in this class
+// Reading a single NUMBER: scanf("%f"/"%d", &var) or cin >> var      
+
       float totalrain = rainam + rainpm;
       float snowfall = totalrain * 11.75;
       
