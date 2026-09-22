@@ -1,5 +1,14 @@
 //Michael Tackett k0475835 Fall Semester 2026
 //this program is to calculate the volume of box
+
+// BUG-FIX REFERENCE - common broken-code patterns found & corrected here:
+// - missing #include <iostream>
+// - variables used before being declared
+// - cin << used instead of cin >> (>> is for INPUT, << is for OUTPUT)
+// - wrong comparison operator used where >> was needed
+// - formula placed before the input it depends on (must come after cin reads the value)
+// - stdio.h-style output mixed into an iostream file
+
 #include <iostream>// forgot this line
 #include <iomanip>//added to be able to use setprecision
 using namespace std;
