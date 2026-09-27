@@ -16,8 +16,8 @@ int main()
 	cin >> temp;
 	cout << "How much precipitation today (in inches)? ";
 	cin >> rain;
-	cout <<  "The Golf course grass divisions are F-Fairways R-Rough G-Greens";
-	cout << "Which do you cheese (FRG)? ";
+	cout <<  "The Golf course grass divisions are F-Fairways R-Rough G-Greens" << endl;
+	cout << "Which do you choose (FRG)? ";
 	cin >> region;
 	cout << endl;
 	cout << endl;
@@ -25,11 +25,65 @@ int main()
 	
 	if (temp < 38)
 	{
-		if (region == 'F')
+		if (region == 'F' || region == 'f')
 		{
-			cout <<"The Fairways on the Golf Course will NOT be watered." << endl;
+			cout << "The Fairways on the Golf Course will NOT be watered." << endl;
+		}
+		else if (region == 'R' || region == 'r')
+		{
+			cout << "The Rough on the Golf Course will NOT be watered." << endl;
+		}
+		else if (region == 'G' || region == 'g')
+		{
+			cout << "The Greens on the Golf Course will NOT be watered." << endl;
+		}
+		else
+		{
+			cout << "An INVALID Region of the Golf Course was selected." << endl;
 		}
 	}
+	else 
+	{
+		if (region == 'F' || region == 'f')
+		{
+			if (rain < 0.475)
+			{
+				cout << "The Fairways on the Golf Course will be watered." << endl;
+			}	
+			else
+		{
+			cout << "The Fairways on the Golf Course will NOT be watered." << endl;
+		}
+	}
+		else if (region == 'R' || region == 'r')
+		{
+			if (rain < 0.135)
+			{
+				cout << "The Rough on the Golf Course will be watered." << endl;
+			}	
+			else
+		{
+			cout << "The Rough on the Golf Course will NOT be watered." << endl;
+		}
+	}
+		else if (region == 'G' || region == 'g')
+		{
+			if (rain < 0.775)
+			{
+				cout << "The Greens on the Golf Course will be watered." << endl;
+			}	
+			else
+		{
+			cout << "The Greens on the Golf Course will NOT be watered." << endl;
+		}
+	}
+	else
+	{
+		cout << "An INVALID Region of the Golf Course was selected." << endl;
+	}
+	}
+	
+	
 	return 0;
 }
 
