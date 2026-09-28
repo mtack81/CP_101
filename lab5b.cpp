@@ -1,6 +1,6 @@
 //Mike Tackett CP101 Fall Semester 2026
 //Uses nested conditionals
-
+//at the bottom there are if statements and they are kinda duplicated and should do checks for all of it to make it more simple
 #include <iostream>
 using namespace std;
 

@@ -46,11 +46,11 @@ int main()
 		{
 			cout << "This is a GREEN MACHINE automobile in fuel economy." << endl;
 		}
-		else if (mpg <= 34.75 && mpg >= 16.25)
+		else if ( mpg >= 16.25)
 		{
 			cout << "This is an AVERAGE automobile in fuel economy." << endl;
 		}
-		else if(mpg < 16.25)
+		else 
 		{
 			cout << "This is a GAS GUZZLER automobile in fuel economy, " << endl;
 		}
