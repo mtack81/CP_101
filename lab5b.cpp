@@ -23,56 +23,47 @@ int main()
 	cout << endl;
 	
 	
-	if (temp < 38)
-	{
-		if (region == 'F' || region == 'f')
+	if (region == 'F' || region == 'f')
+{
+		if (temp < 38)
 		{
 			cout << "The Fairways on the Golf Course will NOT be watered." << endl;
 		}
-		else if (region == 'R' || region == 'r')
+		else if (rain < 0.475)
 		{
-			cout << "The Rough on the Golf Course will NOT be watered." << endl;
-		}
-		else if (region == 'G' || region == 'g')
-		{
-			cout << "The Greens on the Golf Course will NOT be watered." << endl;
+			cout << "The Fairways on the Golf Course will be watered." << endl;
 		}
 		else
 		{
-			cout << "An INVALID Region of the Golf Course was selected." << endl;
-		}
-	}
-	else 
-	{
-		if (region == 'F' || region == 'f')
-		{
-			if (rain < 0.475)
-			{
-				cout << "The Fairways on the Golf Course will be watered." << endl;
-			}	
-			else
-		{
 			cout << "The Fairways on the Golf Course will NOT be watered." << endl;
 		}
 	}
-		else if (region == 'R' || region == 'r')
+	else if (region == 'R' || region == 'r')
+	{
+		if (temp < 38)
 		{
-			if (rain < 0.135)
-			{
-				cout << "The Rough on the Golf Course will be watered." << endl;
-			}	
-			else
+			cout << "The Rough on the Golf Course will NOT be watered." << endl;
+		}
+		else if (rain < 0.135)
+		{
+			cout << "The Rough on the Golf Course will be watered." << endl;
+		}
+		else
 		{
 			cout << "The Rough on the Golf Course will NOT be watered." << endl;
 		}
 	}
-		else if (region == 'G' || region == 'g')
+	else if (region == 'G' || region == 'g')
+	{
+		if (temp < 38)
 		{
-			if (rain < 0.775)
-			{
-				cout << "The Greens on the Golf Course will be watered." << endl;
-			}	
-			else
+			cout << "The Greens on the Golf Course will NOT be watered." << endl;
+		}
+		else if (rain < 0.775)
+		{
+			cout << "The Greens on the Golf Course will be watered." << endl;
+		}
+		else
 		{
 			cout << "The Greens on the Golf Course will NOT be watered." << endl;
 		}
@@ -81,9 +72,7 @@ int main()
 	{
 		cout << "An INVALID Region of the Golf Course was selected." << endl;
 	}
-	}
-	
-	
+
 	return 0;
 }
 
