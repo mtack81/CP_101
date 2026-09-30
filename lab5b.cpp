@@ -26,7 +26,7 @@ int main()
 	
 	if (region == 'F' || region == 'f')
 	{		
-		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today.\n";
+		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today,\n";
 		
 		if (temp < 38 || rain > 0.475 )
 		{	
@@ -39,7 +39,7 @@ int main()
 	}
 	else if (region == 'R' || region == 'r')
 	{	
-		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today.\n";
+		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today,\n";
 		
 		if (temp < 38 || rain > 0.135 )
 		{
@@ -52,7 +52,7 @@ int main()
 	}
 	else if (region == 'G' || region == 'g')
 	 {  
-	 	cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today.\n";
+	 	cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today,\n";
 		
 		if (temp < 38 || rain > 0.775)
 		{
