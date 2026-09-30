@@ -1,7 +1,8 @@
 //Mike Tackett CP101 Fall Semester 2026
 //Uses nested conditionals
-//at the bottom there are if statements and they are kinda duplicated and should do checks for all of it to make it more simple
+
 #include <iostream>
+#include <iomanip>
 using namespace std;
 
 int main()
@@ -21,52 +22,47 @@ int main()
 	cin >> region;
 	cout << endl;
 	cout << endl;
-	
+	cout << fixed << setprecision(3);
 	
 	if (region == 'F' || region == 'f')
-{
-		if (temp < 38)
-		{
+	{		
+		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today.\n";
+		
+		if (temp < 38 || rain > 0.475 )
+		{	
 			cout << "The Fairways on the Golf Course will NOT be watered." << endl;
 		}
-		else if (rain < 0.475)
+		else
 		{
 			cout << "The Fairways on the Golf Course will be watered." << endl;
 		}
-		else
-		{
-			cout << "The Fairways on the Golf Course will NOT be watered." << endl;
-		}
 	}
 	else if (region == 'R' || region == 'r')
-	{
-		if (temp < 38)
+	{	
+		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today.\n";
+		
+		if (temp < 38 || rain > 0.135 )
 		{
 			cout << "The Rough on the Golf Course will NOT be watered." << endl;
 		}
-		else if (rain < 0.135)
+		else
 		{
 			cout << "The Rough on the Golf Course will be watered." << endl;
 		}
-		else
-		{
-			cout << "The Rough on the Golf Course will NOT be watered." << endl;
-		}
 	}
 	else if (region == 'G' || region == 'g')
-	{
-		if (temp < 38)
+	 {  
+	 	cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today.\n";
+		
+		if (temp < 38 || rain > 0.775)
 		{
 			cout << "The Greens on the Golf Course will NOT be watered." << endl;
 		}
-		else if (rain < 0.775)
+		else 
 		{
 			cout << "The Greens on the Golf Course will be watered." << endl;
 		}
-		else
-		{
-			cout << "The Greens on the Golf Course will NOT be watered." << endl;
-		}
+		
 	}
 	else
 	{
