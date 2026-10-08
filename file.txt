@@ -1,0 +1,12 @@
+Read 
+this
+file
+one
+line
+at
+a
+time
+until
+the
+end
+Excellent!!
