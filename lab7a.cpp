@@ -35,3 +35,4 @@ cout << "The data above is now in the file MJT1.dat" << endl;
 
 return 0;
 }
+
