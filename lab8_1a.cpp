@@ -1,4 +1,4 @@
-//Mike Tackett K0475835 CP 101 Fall Semester
+//Mike Tackett K0475835 CP 101 Fall Semester 2026
 
 #include <iostream>
 #include <iomanip>
@@ -39,12 +39,14 @@ float getHeight()
 {
    float height;
    
-   do {
+   do 
+   {
       cout << "Enter the triangle's height: ";
       cin >> height;
       
-      if (height < 0) {
-         cout << "Error: Height cannot be negative.\n";
+      if (height < 0) 
+      {
+         cout << "Error: Height cannot be negative." << endl;
       }
    } while (height < 0);
    
@@ -55,12 +57,14 @@ float getBase()
 {
    float base;
    
-   do {
+   do 
+   {
       cout << "Enter the triangle's base: ";
       cin >> base;
       
-      if (base < 0) {
-         cout << "Error: Base cannot be negative.\n";
+      if (base < 0) 
+      {
+         cout << "Error: Base cannot be negative." << endl;
       }
    } while (base < 0);
    
@@ -75,7 +79,7 @@ float getArea(float height, float base)
 void displayData(float height, float base, float area)
 {
    cout << fixed << setprecision(2);
-   cout << "\nTriangle Data:" << endl;
+   cout << endl << "Triangle Data:" << endl;
    cout << "Height: " << height << endl;
    cout << "Base: " << base << endl;
    cout << "Area: " << area << endl;
