@@ -1,5 +1,5 @@
+// Mike Tackett K0475835 Fall Semester 2026
 // Celsius to Fahrenheit and Kelvin converter
-// Mike Tackett K0475835 Fall Semester
 
 #include <iostream>
 using namespace std;
