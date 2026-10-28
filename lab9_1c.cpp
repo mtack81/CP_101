@@ -4,8 +4,8 @@
 using namespace std;
 
 int cubeit(bool value);
-double cubeit(double value);
-double cubeit(int value);
+float cubeit(float value);
+float cubeit(int value);
 
 int main()
 {
@@ -18,15 +18,22 @@ int main()
 
 int cubeit(bool value)
 {
-    return value;
+    if (value == true)
+    {
+        return 1;
+    }
+    else
+    {
+        return 0;
+    }
 }
 
-double cubeit(double value)
+float cubeit(float value)
 {
     return value * value * value;
 }
 
-double cubeit(int value)
+float cubeit(int value)
 {
     return value * value * value;
 }
