@@ -10,10 +10,10 @@ int main()
     
     for (int &number : numbers)
     {
-        number = rand() % 100;
+        number = rand();
     }
     
-    cout << "Twelve values generated ";
+    cout << "Twelve values generated \n";
     
     for (int number : numbers)
     {
