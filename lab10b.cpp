@@ -15,23 +15,23 @@ int main()
     
     do
     {
-        cout << "Calculation of 3 x 3 Determinant" << endl;
+        cout << "Calculation of 3 x 3 Determinant \n" << endl;
     
-        cout << "What is Row 1 of the matrix?" << endl;
+        cout << "What is Row 1 of the matrix? ";
         cin >> row1[0] >> row1[1] >> row1[2];
     
-        cout << "What is Row 2 of the matrix?" << endl;
+        cout << "What is Row 2 of the matrix? ";
         cin >> row2[0] >> row2[1] >> row2[2];
     
-        cout << "What is Row 3 of the matrix?" << endl;
+        cout << "What is Row 3 of the matrix? ";
         cin >> row3[0] >> row3[1] >> row3[2];
-        
+        cout << fixed << setprecision(3);
         cout << endl;
-        cout << "The Matrix is:" << endl;   
+        cout << "3 x 3 Matrix entered is:" << endl;   
 
         cout << row1[0] << " " << row1[1] << " " << row1[2] << endl;
         cout << row2[0] << " " << row2[1] << " " << row2[2] << endl;
-        cout << row3[0] << " " << row3[1] << " " << row3[2] << endl;
+        cout << row3[0] << " " << row3[1] << " " << row3[2] << endl << endl;
         
         determinant = (row1[0] * row2[1] * row3[2]) +
                       (row1[1] * row2[2] * row3[0]) +
@@ -40,12 +40,12 @@ int main()
                       (row1[0] * row2[2] * row3[1]) -
                       (row1[2] * row2[1] * row3[0]);
                       
-        cout << "Determinant: " << fixed << setprecision(3) << determinant << endl;
+        cout << "The determinant of the above matrix is: " << determinant << endl << endl;
         
-        cout << "Would you like to do another matrix (Y/N)?" << endl;
+        cout << "Would you like to do another matrix (Y/N)? ";
         cin >> again;
     }
-    while (again == 'Y' || again == 'y');
+    while (again != 'N');
     
     return 0;
 }
