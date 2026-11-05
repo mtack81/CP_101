@@ -7,7 +7,7 @@ using namespace std;
 int main()
 {
     float array1[3][3][3];
-    float array2[3][3][3] = {{{5.0}}};
+    float array2[3][3][3] = {5.0};
     
     cout << "First array:" << '\n';
     
