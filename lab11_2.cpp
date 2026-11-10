@@ -42,7 +42,7 @@ int main()
     else
     {
         cout << endl;
-        cout << "Sorry " << number << " did not match your numbers, better luck tomorrow!" << endl;
+        cout << "Sorry " << setw(3) << setfill('0') << number << " did not match your numbers, better luck tomorrow!" << endl;
     }
     
     return 0;
