@@ -1,4 +1,4 @@
-//Michael Tackett CP 101 Fall Semester 2026
+//Michael Tackett CP 101 Fall Semester 2026 K0475835
 //Lab 8.2
 
 #include <iostream>
@@ -23,45 +23,33 @@ int main()
     char kickingteam;
     char half;
     
-    cout << "Enter visitor mascot name: ";
+    cout << "Kickball Tourney Bruin Da Bear's 2026" << endl;
+    cout << "Scoreboard/Umpire's Assistant At Your Service" << endl;
+    cout << endl;
+    
+    cout << "What is the mascot name for the Visiting Team? ";
     getline(cin, visitorname);
     
-    cout << "Enter home mascot name: ";
+    cout << "What is the mascot name for the Home Team? ";
     getline(cin, homename);
-    
-    cout << "Visitor: " << visitorname << endl;
-    cout << "Home: " << homename << endl;
-    
-    cout << "Who won the coin toss? Enter H for home or V for visitor: ";
+           
+    cout << "Who won the toss (H/V)? ";
     cin >> toss;
     if (toss == 'h') toss = 'H';
     if (toss == 'v') toss = 'V';    
-    if (toss != 'H' && toss != 'V' && toss != 'h' && toss != 'v')
+    if (toss != 'H' && toss != 'V')
     {
         toss = 'H';
     }
-    
-    cout << "Toss result: " << toss << endl;
-    
+      
     kickingteam = toss;
+    half = 'T';
     
-    if (kickingteam == 'V')
-    {
-        half = 'T';
-    }
-    else
-    {
-        half = 'B';
-    }
-   
-    if (kickingteam == 'H')
-    {
-        cout << "First team kicking: " << homename << endl;
-    }
-    else
-    {
-        cout << "First team kicking: " << visitorname << endl;
-    }
+    cout << "  The Item Codes are as follows:" << endl;
+    cout << "Code Description   Code  Description    Code Description" << endl;
+    cout << " S     Strike       K      Kick          B     Ball" << endl;
+    cout << " O     Out          F      Foul Ball     R     Run in" << endl;
+    cout << "                    G      Game Canceled" << endl;
 
     
     return 0;
