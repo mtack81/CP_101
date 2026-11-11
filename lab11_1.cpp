@@ -1,3 +1,4 @@
+//Michael Tackett CP 101 Fall Semester 2026 K0475835
 #include <iostream>
 #include <cstdlib>
 #include <ctime>
@@ -45,26 +46,8 @@ int main()
         cout << numbers[index] << " ";
     }
     cout << endl << endl << endl;
-    
-    highest = numbers[0];
-    lowest = numbers[0];
-    
-    for (index = 1; index < count; index++)
-    {
-        if (numbers[index] > highest)
-        {
-            highest = numbers[index];
-        }
-        if (numbers[index] < lowest)
-        {
-            lowest = numbers[index];
-        }
-    }
-    
-    cout << "The Highest number is " << highest << endl;
-    cout << "The Lowest number is " << lowest << endl << endl << endl;
-    
-    for (index = 0; index < count -1; index++)
+    //selection sort begin
+    for (index = 0; index < count - 1; index++)
     {
         smallest = index;
         
@@ -84,7 +67,13 @@ int main()
         
         numbers[index] = temp;
     }
+    //selection sort end
+    cout << "The highest number is " << numbers[count-1] << endl;
+    cout << "The lowest number is " << numbers[0] << endl;
+    cout << endl;
     
+ 
+		
     cout << "The " << count << " numbers in Ascending Order: " << endl;
 
     for (index = 0; index < count; index++)
