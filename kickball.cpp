@@ -13,6 +13,7 @@ int main()
     int outs = 0;
     int balls = 0;
     int strikes = 0;
+    int runs = 0;
     int visitorkicker = 1;
     int homekicker = 1;
     int visitortotal = 0;
@@ -51,6 +52,36 @@ int main()
     cout << " O     Out          F      Foul Ball     R     Run in" << endl;
     cout << "                    G      Game Canceled" << endl;
 
-    
+    if (kickingteam == 'H')
+    {
+		cout << "****** Home Team {" << homename << "} now up to Kick. Visitor Team {" << visitorname << "} in the field ******" << endl;
+	}
+	else
+	{
+		cout << "****** Visitor Team {" << visitorname << "} now up to Kick. Home Team {" << homename << "} in the field ******" << endl; 
+	}
+	
+	cout << "Beginning of the ";
+	if (half == 'T')
+	{
+		cout << "top";
+	}
+	else
+	{
+		cout << "bottom";
+	}
+	cout << " of inning # " << inning << endl << endl;
+	
+	cout << "Inning Status   Kicker  # "; 
+	if (kickingteam== 'H')
+    {
+        cout << homekicker;
+    }
+    else
+    {
+        cout << visitorkicker;
+    }
+	cout << " Balls-" << balls << " Strikes-" << strikes << " Outs-" << outs << " Runs-" << runs << endl;
+	
     return 0;
 }
