@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <cctype>
 using namespace std;
 
 int main()
@@ -23,6 +24,8 @@ int main()
     char toss;
     char kickingteam;
     char half;
+    char code;
+    bool canceled = false;
     
     cout << "Kickball Tourney Bruin Da Bear's 2026" << endl;
     cout << "Scoreboard/Umpire's Assistant At Your Service" << endl;
@@ -36,8 +39,7 @@ int main()
            
     cout << "Who won the toss (H/V)? ";
     cin >> toss;
-    if (toss == 'h') toss = 'H';
-    if (toss == 'v') toss = 'V';    
+    toss = toupper(toss);
     if (toss != 'H' && toss != 'V')
     {
         toss = 'H';
@@ -54,26 +56,26 @@ int main()
 
     if (kickingteam == 'H')
     {
-		cout << "****** Home Team {" << homename << "} now up to Kick. Visitor Team {" << visitorname << "} in the field ******" << endl;
-	}
-	else
-	{
-		cout << "****** Visitor Team {" << visitorname << "} now up to Kick. Home Team {" << homename << "} in the field ******" << endl; 
-	}
-	
-	cout << "Beginning of the ";
-	if (half == 'T')
-	{
-		cout << "top";
-	}
-	else
-	{
-		cout << "bottom";
-	}
-	cout << " of inning # " << inning << endl << endl;
-	
-	cout << "Inning Status   Kicker  # "; 
-	if (kickingteam== 'H')
+        cout << "****** Home Team {" << homename << "} now up to Kick. Visitor Team {" << visitorname << "} in the field ******" << endl;
+    }
+    else
+    {
+        cout << "****** Visitor Team {" << visitorname << "} now up to Kick. Home Team {" << homename << "} in the field ******" << endl; 
+    }
+    
+    cout << "Beginning of the ";
+    if (half == 'T')
+    {
+        cout << "top";
+    }
+    else
+    {
+        cout << "bottom";
+    }
+    cout << " of inning # " << inning << endl << endl;
+    
+    cout << "Inning Status   Kicker  # "; 
+    if (kickingteam== 'H')
     {
         cout << homekicker;
     }
@@ -81,7 +83,24 @@ int main()
     {
         cout << visitorkicker;
     }
-	cout << " Balls-" << balls << " Strikes-" << strikes << " Outs-" << outs << " Runs-" << runs << endl;
-	
+    cout << " Balls-" << balls << " Strikes-" << strikes << " Outs-" << outs << " Runs-" << runs << endl;
+    
+    do
+    {
+        cout << "1st Kicker (Count of 1): ";
+        cin >> code;
+        code = toupper(code);
+        
+        if (code != 'S' && code != 'K' && code != 'B' && code != 'O' && code != 'F' && code != 'R' && code != 'G')
+        {
+            cout << "Not a valid code" << endl;
+        }
+    }
+    while (code != 'S' && code != 'K' && code != 'B' && code != 'O' && code != 'F' && code != 'R' && code != 'G');
+    
+    if (code == 'G')
+    {
+        canceled = true;
+    }
     return 0;
 }
