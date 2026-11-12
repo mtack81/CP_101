@@ -21,6 +21,7 @@ int main()
     int hometotal = 0;
     int visitorscore[6] = {0};
     int homescore[6] = {0};
+    int count =1;
     char toss;
     char kickingteam;
     char half;
@@ -74,33 +75,46 @@ int main()
     }
     cout << " of inning # " << inning << endl << endl;
     
-    cout << "Inning Status   Kicker  # "; 
-    if (kickingteam== 'H')
+    while (canceled == false)
     {
-        cout << homekicker;
-    }
-    else
-    {
-        cout << visitorkicker;
-    }
-    cout << " Balls-" << balls << " Strikes-" << strikes << " Outs-" << outs << " Runs-" << runs << endl;
+		cout << "Inning Status   Kicker  # "; 
+		if (kickingteam== 'H')
+		{	
+			cout << homekicker;
+		}
+		else
+		{
+			cout << visitorkicker;
+		}
+		cout << " Balls-" << balls << " Strikes-" << strikes << " Outs-" << outs << " Runs-" << runs << endl;
     
-    do
-    {
-        cout << "1st Kicker (Count of 1): ";
-        cin >> code;
-        code = toupper(code);
+		do
+		{
+			cout << "1st Kicker (Count of " << count << "): ";
+			cin >> code;
+			code = toupper(code);
         
-        if (code != 'S' && code != 'K' && code != 'B' && code != 'O' && code != 'F' && code != 'R' && code != 'G')
-        {
-            cout << "Not a valid code" << endl;
-        }
-    }
-    while (code != 'S' && code != 'K' && code != 'B' && code != 'O' && code != 'F' && code != 'R' && code != 'G');
+			if (code != 'S' && code != 'K' && code != 'B' && code != 'O' && code != 'F' && code != 'R' && code != 'G')
+			{
+				cout << "Not a valid code" << endl;
+			}
+		}
+        while (code != 'S' && code != 'K' && code != 'B' && code != 'O' && code != 'F' && code != 'R' && code != 'G');
     
-    if (code == 'G')
-    {
-        canceled = true;
+        if (code == 'G')
+        {
+            canceled = true;
+        }
+        if (code == 'B')
+        {
+            balls++;
+            count++;
+        }
+        if (code == 'S')
+        {
+            strikes++;
+            count++;
+        }
     }
     return 0;
 }
