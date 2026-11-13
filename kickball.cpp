@@ -115,6 +115,37 @@ int main()
             strikes++;
             count++;
         }
+        if (strikes == 3)
+        {
+			outs++;
+			balls = 0;
+			strikes = 0;
+			count = 1;
+			
+			if (kickingteam == 'H')
+			{
+				homekicker++;
+			}
+			else
+			{
+				visitorkicker++;
+			}
+		}
+		if (balls == 4)
+        {
+			balls = 0;
+			strikes = 0;
+			count = 1;
+			
+			if (kickingteam == 'H')
+			{
+				homekicker++;
+			}
+			else
+			{
+				visitorkicker++;
+			}
+		}
     }
     return 0;
 }
