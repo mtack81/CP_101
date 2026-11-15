@@ -28,7 +28,7 @@ int main()
 	{		
 		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today,\n";
 		
-		if (temp < 38 || rain > 0.475 )
+		if (temp >= 38 || rain > 0.475 )
 		{	
 			cout << "The Fairways on the Golf Course will NOT be watered." << endl;
 		}
@@ -41,7 +41,7 @@ int main()
 	{	
 		cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today,\n";
 		
-		if (temp < 38 || rain > 0.135 )
+		if (temp >= 38 || rain > 0.135 )
 		{
 			cout << "The Rough on the Golf Course will NOT be watered." << endl;
 		}
@@ -54,7 +54,7 @@ int main()
 	 {  
 	 	cout << "Given the temperature is " << temp << " degrees and " << rain << " inches of precipitation today,\n";
 		
-		if (temp < 38 || rain > 0.775)
+		if (temp >= 38 || rain > 0.775)
 		{
 			cout << "The Greens on the Golf Course will NOT be watered." << endl;
 		}
