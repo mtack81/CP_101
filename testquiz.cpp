@@ -1,38 +1,43 @@
+//Mike Tackett CP101 Fall Semester 2026
 #include <iostream>
-
+#include <iomanip>
 using namespace std;
 
 int main()
 {
-	int bowlers[12];
+	int books;
+	int index;
+	int students[8];
 	
-	cout << "Bruin Bowling League Score Tracker 2026" << endl << endl;
+	cout << "Bruin Reading Challenge 2026" << endl << endl;
+	
+	do
+    {
+        cout << "How many in the challenge (2-8)? ";
+        cin >> students;
+                
+        if (students[index] < 2 || students[index] > 8)
+        {
+            cout << "Must be between 2 and 8, try again" << endl;
+        }
+    }
+    
+    while (students[index] < 2 || students[index] > 8);
 	
 	do
 	{
-		cout << "How many bowlers tonight (2-10)? ";
-		cin >> bowlers;
+		for (index = 0; index < students[index]; index++)
+		{	
+			cout << "Enter books read by student: ";
+			cin >> books;
+		}
+		if (books < 0 || books > 40)
+		{
+			cout << "Books must be 0-40, try again" << endl;
+		}
 	}
-	while (bowlers < 2 || bowlers > 10);
-	
-	if (bowlers < 2 || bowlers > 10)
-	{
-		cout << "Must be between 2 and 10, try again";
-	}
-	
-	cout << "Enter score for Bowler 1: ";
-	cin >> bowler[0];
-	cout << "Enter score for Bowler 2: ";
-	cin >> bowler[1];
-	cout << "Enter score for Bowler 3: ";
-	cin >> bowler[2];
-	
-	cout << "Scores from lowest to highest: " << endl;
-	cout << bowlers << desc << endl << endl;
-	
-	cout << "The high score is " << bowlers[0] << endl;
-	cout << "The low score is " << bowlers[12] << endl;
-	cout << "The average score is " << avg << bowlers << endl;
+	while (books < 0 || books > 40);
 	
 	return 0;
+	
 }

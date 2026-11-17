@@ -69,3 +69,75 @@ In the order a program gets built: top to bottom.
 | printf / scanf | `lab3a.cpp`, `lab3c.cpp` |
 | Pointers | `lab12a.cpp`, `lab12b.cpp` |
 | 2D / 3D array | `lab10d.cpp` |
+
+---
+
+# COPY RECIPES (in build order)
+
+**Before every variable, ask: ONE number or a LIST?** One number → `int count;` List → `int books[8];`
+
+### 1. Header
+Type first: `//Michael Tackett CP 101 Fall Semester 2026 K0475835`
+
+### 2. "How many ___ (2–8)?" with re-ask
+- Copy the first do-while in `lab11_1.cpp` (the "How many numbers" one)
+- Change: the question, the 2 and 18 limits (in the `if` AND the `while`), the error message
+- The variable is `count`, a plain `int`
+
+### 3. Function that asks for one value and checks it
+- Copy `getHeight` from `lab8_1a.cpp` (from `float getHeight()` to its last `}`), paste BELOW `main`
+- Rename `getHeight` → `getBooks`, `height` → `books`
+- Change `float` to `int` if the values are whole numbers
+- Add the person's number in the `( )`: `int getBooks(int student)`
+- Put it in the question: `cout << "Enter books read by student " << student << ": ";`
+- Change the limits and the error message
+
+### 4. Prototype
+- Copy the function's first line, add `;`, paste ABOVE `main`
+- `int getBooks(int student)` → `int getBooks(int student);`
+
+### 5. Fill the array using the function
+- Copy the fill loop from `lab11_1.cpp` (the `for` with `rand()`)
+- Replace the `rand` line with a call to your function:
+  `books[index] = getBooks(index + 1);`
+- `index + 1` because slots start at 0, people start at 1
+
+### 6. Sort
+- Copy everything between `//selection sort begin` and `//selection sort end` in `lab11_1.cpp`
+- Change every `numbers` to your array name
+- Needs `int smallest; int temp; int search;` declared in `main`
+
+### 7. Highest / lowest (after sorting)
+- Highest: `books[count - 1]`
+- Lowest: `books[0]`
+
+### 8. Function that totals the array
+- Array in the `( )` like `lab10c.cpp`: `int totalBooks(const int books[], int count)`
+- Inside: the `sum = 0` loop from `lab7.2a.cpp`, but add `books[index]` instead of reading a file
+- End with `return sum;`
+- Call it: `total = totalBooks(books, count);`
+
+### 9. Average with decimals
+- Ints divide without decimals (see `lab3d.cpp`). Use: `average = (float)total / count;`
+
+### 10. Print the array on one line
+- Copy the "Ascending Order" print loop from `lab11_1.cpp`, rename `numbers`
+
+### 11. Two decimals
+- `#include <iomanip>` at top, then `cout << fixed << setprecision(2);` once before printing
+
+### 12. Is it in the list? (search)
+- Copy the `found = false;` + loop from `lab11_2.cpp`
+
+### 13. Price/category by ranges
+- Copy the `if / else if / else` from `lab5c.cpp`, change the numbers
+
+### 14. Do it again (Y/N)
+- Copy the outer do-while from `lab10b.cpp`
+
+---
+
+# COMPILE TROUBLE
+- Error points at a line that looks fine → check the line ABOVE for a missing `;`
+- `do { } while (...)` ALWAYS ends with `;`
+- Compile after EVERY recipe, not at the end
