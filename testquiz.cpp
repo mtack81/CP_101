@@ -1,43 +1,78 @@
-//Mike Tackett CP101 Fall Semester 2026
+//Michael Tackett k0475835 Fall Semester 15:57 11/17/26
+
 #include <iostream>
-#include <iomanip>
 using namespace std;
 
 int main()
 {
-	int books;
+	int count;
+	float weights[64];
 	int index;
-	int students[8];
+	int smallest;
+	int search;
+	int temp;
 	
-	cout << "Bruin Reading Challenge 2026" << endl << endl;
+	cout << "***** Michael Tackett CP101 Midterm Prog Exam 03 ********" << endl << endl;
+	cout << "Fall 2026 Bruin Pumpkin Patch Weigh-In" << endl << endl;
 	
 	do
     {
-        cout << "How many in the challenge (2-8)? ";
-        cin >> students;
+        cout << "How many pumpkins are being weighed (2-15)? ";
+        cin >> count;
                 
-        if (students[index] < 2 || students[index] > 8)
+        if (count < 2 || count > 15)
         {
-            cout << "Must be between 2 and 8, try again" << endl;
+            cout << "***   Number of pumpkins must be 2-15 please try again***" << endl;
         }
     }
     
-    while (students[index] < 2 || students[index] > 8);
-	
-	do
-	{
-		for (index = 0; index < students[index]; index++)
-		{	
-			cout << "Enter books read by student: ";
-			cin >> books;
-		}
-		if (books < 0 || books > 40)
-		{
-			cout << "Books must be 0-40, try again" << endl;
-		}
+    while (count < 2 || count > 15);
+    
+    for (index = 0; index < count; index++)
+    {
+		cout << "What is the weight of pumpkin#" << index + 1 << " (in lbs)? ";
+		cin >> weights[index];
 	}
-	while (books < 0 || books > 40);
 	
-	return 0;
+	cout << endl;
 	
-}
+	for (index = 0; index < count - 1; index++)
+    {
+        smallest = index;
+        
+        for (search = index + 1; search < count; search++)
+        {
+            if (weights[search] < weights[smallest])
+            {
+                smallest = search;
+            }
+        }
+        
+        temp = weights[smallest];
+        for (search = smallest; search > index; search--)
+        {
+            weights[search] = weights[search - 1];
+        }
+        
+        weights[index] = temp;
+    }
+
+    cout << "Pumpkin weights from lightest to heaviest:" << endl;
+    for (index = 0; index < count; index++)
+    {
+        cout << weights[index] << " ";
+    }
+    cout << endl << endl;
+    cout << "Heaviest pumpkin: " << weights[count-1] << endl; 
+    cout << "The lowest number is " << weights[0] << endl;
+    cout << "Total weight: " << " lbs" << endl; // no idea how to figure
+    cout << "Average weight: " << "lbs" << endl; // no idea how to figure
+    
+    // int crates = (total/50) ceiling somewhere in here to round up but not in the fucking notes
+    cout << "You will need " << " crates to ship them." << endl;
+    
+     	
+        	
+    return 0;
+	
+}	
